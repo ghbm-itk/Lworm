@@ -23,4 +23,4 @@ jobs:
 
     - name: Opening Chrome
       run: |
-        python -c "from selenium.webdriver import Chrome; Chrome()"
+        python -c "from selenium.webdriver import Chrome; b = Chrome(); b.get('https://da.wikipedia.org/wiki/C/o'); print(b.find_element('tag name', 'body').text[0:10])"
